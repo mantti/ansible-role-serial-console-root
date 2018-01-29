@@ -5,4 +5,18 @@
     enabled: yes
     state: restarted
   
+- name: reload serial-console@ttyS1
+  systemd: 
+    daemon_reload: yes
+    name: serial-getty@ttyS1
+    enabled: yes
+    state: restarted
+  
+- name: reload serial-console@ttyS2
+  systemd: 
+    daemon_reload: yes
+    name: serial-getty@ttyS2
+    enabled: yes
+    state: restarted
+  
 
